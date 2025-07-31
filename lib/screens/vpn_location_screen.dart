@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/location_tile.dart';
 
 class VPNLocationScreen extends StatelessWidget {
@@ -21,15 +22,15 @@ class VPNLocationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/background.png"),
-              fit: BoxFit.cover,
-            ),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/background.png"),
+            fit: BoxFit.cover,
           ),
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+        child: SafeArea(
           child: Column(
             children: [
               Row(
@@ -40,7 +41,7 @@ class VPNLocationScreen extends StatelessWidget {
                     },
                     child: Icon(Icons.arrow_back, color: Colors.white),
                   ),
-                  SizedBox(width: 10),
+                  SizedBox(width: 30),
                   Text(
                     'Choose Location',
                     style: TextStyle(color: Colors.white, fontSize: 20),
@@ -50,14 +51,29 @@ class VPNLocationScreen extends StatelessWidget {
               SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 15,
+                  ),
                   hintText: 'Search location',
-                  hintStyle: TextStyle(color: Colors.grey),
                   filled: true,
                   fillColor: Colors.black26,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF4B5563)),
+                    borderRadius: BorderRadius.circular(100),
                   ),
-                  prefixIcon: Icon(Icons.search, color: Colors.white),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF4B5563)),
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.red.withOpacity(0.5)),
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  suffixIcon: Icon(
+                    FontAwesomeIcons.magnifyingGlass,
+                    color: Color(0xFF374957),
+                  ),
                 ),
                 style: TextStyle(color: Colors.white),
               ),
@@ -66,9 +82,17 @@ class VPNLocationScreen extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: locations.length,
                   itemBuilder: (context, index) {
-                    return LocationTile(
-                      name: locations[index]['name'],
-                      flagAsset: 'assets/flags/${locations[index]['flag']}',
+                    return Column(
+                      children: [
+                        LocationTile(
+                          name: locations[index]['name'],
+                          flagAsset: 'assets/flags/${locations[index]['flag']}',
+                        ),
+                        Divider(
+                          color: Colors.white.withOpacity(0.2),
+                          thickness: 1,
+                        ),
+                      ],
                     );
                   },
                 ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie/screens.dart/vpn_location_screen.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:movie/screens/vpn_location_screen.dart';
 
 class VPNMainScreen extends StatelessWidget {
   const VPNMainScreen({super.key});
@@ -7,15 +8,16 @@ class VPNMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/background.png"),
-              fit: BoxFit.cover,
-            ),
+      backgroundColor: Colors.black,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/background.png"),
+            fit: BoxFit.cover,
           ),
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 40),
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 24,),
+        child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -41,21 +43,33 @@ class VPNMainScreen extends StatelessWidget {
                     children: [
                       Image.asset('assets/flags/us.png', height: 24),
                       SizedBox(width: 10),
-                      Text(
-                        'United States',
-                        style: TextStyle(color: Colors.white),
+                      Text.rich(
+                        TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'United States\n IP ',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextSpan(
+                              text: '79.110.53.95',
+                              style: TextStyle(color: Colors.white, fontSize: 12),
+                            ),
+                          ],
+                        ),
                       ),
+          
                       Spacer(),
                       Icon(Icons.network_cell, color: Colors.purple),
                       SizedBox(width: 5),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(3),
-                          border: Border.all(
-                            color: Colors.grey.withOpacity(0.5),
-                          ),
+                          border: Border.all(color: Colors.white),
                         ),
-                        child: Icon(Icons.chevron_right, color: Colors.white),
+                        child: Icon(FontAwesomeIcons.angleRight, color: Colors.white,size: 20,),
                       ),
                     ],
                   ),
@@ -63,19 +77,56 @@ class VPNMainScreen extends StatelessWidget {
               ),
               SizedBox(height: 30),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
-                  Text(
-                    "↓ 28.5 KB/s",
-                    style: TextStyle(color: Colors.purpleAccent),
+                  Icon(
+                    FontAwesomeIcons.arrowDown,
+                    color: Color(0xFF6622CC),
+                    size: 20,
                   ),
-                  Text(
-                    "↑ 21.6 KB/s",
-                    style: TextStyle(color: Colors.greenAccent),
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '28.5 ',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'KB/s',
+                          style: TextStyle(color: Colors.white, fontSize: 12),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Spacer(),
+                  Icon(
+                    FontAwesomeIcons.arrowUp,
+                    color: Color(0xFF22CCC2),
+                    size: 20,
+                  ),
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: ' 21.6 ',
+                          style: TextStyle(
+                            color: Color(0xFF827878),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'KB/s',
+                          style: TextStyle(color: Color(0xFF827878), fontSize: 12),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
-              // SizedBox(height: 10),
               Expanded(
                 child: Center(
                   child: Column(
@@ -90,7 +141,7 @@ class VPNMainScreen extends StatelessWidget {
                         width: 100,
                         height: 100,
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: Color(0xFF2489FF),
                           shape: BoxShape.circle,
                         ),
                         child: Center(

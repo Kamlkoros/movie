@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie/screens.dart/login_screnn.dart';
-import 'package:movie/screens.dart/movie.dart';
+import 'package:movie/screens/login_screnn.dart';
+import 'package:movie/screens/movie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -71,7 +71,7 @@ class SplashScreenState extends State<SplashScreen> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      onPressed: () => Navigator.push(
+                      onPressed: () => Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) => LoginScreen()),
                       ),

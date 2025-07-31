@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LocationTile extends StatelessWidget {
   final String name;
@@ -16,12 +17,11 @@ class LocationTile extends StatelessWidget {
         children: [
           Icon(Icons.network_cell, color: Colors.purple),
           SizedBox(width: 8),
-          Icon(Icons.keyboard_arrow_down, color: Colors.white),
+          Icon(FontAwesomeIcons.chevronDown, color: Color(0xFFAEAEAE),size: 16,),
         ],
       ),
 
       onTap: () {
-        // Handle location selection
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text('Selected location: $name')));
