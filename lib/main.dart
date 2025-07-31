@@ -12,11 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(useMaterial3: true).copyWith(
-        textTheme: ThemeData.dark(
-          useMaterial3: true,
-        ).textTheme.apply(fontFamily: 'Poppins'),
-      ),
+      theme: ThemeData.dark(useMaterial3: true),
       home: SplashScreen(),
     );
   }
