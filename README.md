@@ -1,11 +1,3 @@
-# movie
-
-Splash Screen
-
-<img width="1290" height="2796" alt="Image" src="https://github.com/user-attachments/assets/e041c700-3c94-4ae5-9b92-317b1bd1dd9e" />
-
-<img width="1290" height="2796" alt="Image" src="https://github.com/user-attachments/assets/9544da25-1170-438d-b232-ab68590c8c21" />
-
-Movie Screen
-
-<img width="1290" height="2796" alt="Image" src="https://github.com/user-attachments/assets/7e3f7983-1620-46b2-bc6c-7d4211e6a5b6" />
+| Login Screen | Forget Screen | VPN Screen 1 | VPN Screen 2 | Splash Screen | Movie Screen |
+|:------------:|:-------------:|:------------:|:------------:|:-------------:|:------------:|
+| <img src="https://github.com/user-attachments/assets/327f04a4-7e19-4c46-af95-fc050246d6a4" alt="Login Screen" width="200"/> | <img src="https://github.com/user-attachments/assets/6b22bc6d-8ccb-4003-82a7-6e7d0e426096" alt="Forget Screen" width="200"/> | <img src="https://github.com/user-attachments/assets/22046f80-20aa-4573-acd6-e45cca9be873" alt="VPN Screen 1" width="200"/> | <img src="https://github.com/user-attachments/assets/177e764f-f844-4608-a829-12b24b589678" alt="VPN Screen 2" width="200"/> | <img src="https://github.com/user-attachments/assets/e041c700-3c94-4ae5-9b92-317b1bd1dd9e" alt="Splash Screen" width="200"/> | <img src="https://github.com/user-attachments/assets/7e3f7983-1620-46b2-bc6c-7d4211e6a5b6" alt="Movie Screen" width="200"/> |
