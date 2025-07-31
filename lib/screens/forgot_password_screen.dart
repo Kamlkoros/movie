@@ -17,6 +17,8 @@ class ForgotPasswordScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: SafeArea(
           child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+
             children: [
               Image.asset('assets/images/logo.png', height: 120),
               SizedBox(height: 20),
