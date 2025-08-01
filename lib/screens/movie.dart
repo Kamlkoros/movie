@@ -57,7 +57,9 @@ class Movie extends StatelessWidget {
                             backgroundColor: Color(0xFF252836),
                             padding: EdgeInsets.only(left: 8),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                           icon: Icon(Icons.arrow_back_ios, color: Colors.white),
                         ),
                       ),

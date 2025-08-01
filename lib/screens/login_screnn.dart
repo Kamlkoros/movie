@@ -132,12 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Spacer(),
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ForgotPasswordScreen(),
-                          ),
-                        );
+                        Navigator.pushNamed(context, '/forgot_password');
                       },
                       child: Text(
                         'Forget Password',
@@ -149,10 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => VPNMainScreen()),
-                    );
+                    Navigator.pushNamed(context, '/movie');
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size.fromHeight(40),

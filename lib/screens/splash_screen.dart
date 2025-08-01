@@ -71,10 +71,10 @@ class SplashScreenState extends State<SplashScreen> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      onPressed: () => Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => LoginScreen()),
-                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
+
                       child: Text(
                         'Login',
                         style: TextStyle(

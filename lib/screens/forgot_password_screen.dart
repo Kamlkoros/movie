@@ -17,8 +17,7 @@ class ForgotPasswordScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: SafeArea(
           child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('assets/images/logo.png', height: 120),
               SizedBox(height: 20),
@@ -79,7 +78,9 @@ class ForgotPasswordScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/verify_code_screen');
+                },
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size.fromHeight(40),
                   backgroundColor: Color(0xFF515DEF),
